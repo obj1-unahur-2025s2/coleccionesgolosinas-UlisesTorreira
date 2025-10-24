@@ -1,9 +1,37 @@
-import example.pepita
+import golosinas.*
+import mariano.*
 
-describe "group of tests for pepita" {
+//TESTS
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+// TESTS DE GOLOSINAS
+
+describe "tests de golosinas" {
+   
+    const bombon =     new Bombon()
+    const alfajor =    new Alfajor()
+    const caramelo =   new Caramelo()
+    const chupetin =   new Chupetin()
+    const oblea =      new Oblea()
+    const chocolatin = new Chocolatin(peso = 40)
+    const pastilla =   new Pastilla()
+    
+  test "Peso de los caramelos" {
+    assert.equals(15, bombon.peso())
+    assert.equals(300, alfajor.peso())
+    assert.equals(5, caramelo.peso())
+    assert.equals(7, chupetin.peso())
+    assert.equals(250, oblea.peso())
+    assert.equals(40, chocolatin.peso())
+    assert.equals(5, pastilla.peso())
+  }
+  test "Precio de los caramelos" {
+    assert.equals(5, bombon.valor())
+    assert.equals(12, alfajor.valor())
+    assert.equals(1, caramelo.valor())
+    assert.equals(2, chupetin.valor())
+    assert.equals(5, oblea.valor())
+    assert.equals(20, chocolatin.valor())
+    assert.equals(7, pastilla.valor())
   }
 
 }
